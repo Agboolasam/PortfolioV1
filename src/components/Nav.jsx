@@ -1,16 +1,19 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+import Hamburger from "./Hamburger";
+
 function Nav() {
     return (
         <>
             <nav>
-                <i>LOGO</i>
+                <NavLink to={"/"}>  <i>LOGO</i></NavLink>
                 <div className="nav-items">
-                    <ul>
-                        <NavLink push to={"/projects"}> <li>Projects</li></NavLink>
+                    <ul >
+                        <NavLink to={"/projects"}> <li>Projects</li></NavLink>
                         <NavLink to={"/contact"}> <li>Contact</li></NavLink>
-                        <a href="/src/assets/Tech cv.pdf" download><li>Download Resume</li></a>
+                        <a href="/src/assets/AgboolaSamsonIfedolapo.pdf" download><li>Download Resume</li></a>
                     </ul>
                 </div>
+                <Hamburger />
             </nav>
         </>
     )

@@ -1,16 +1,14 @@
-.App {
-  width: 100vw;
-  height: 100vh;
+.Ap {
+  z-index: 1;
 }
 nav {
+  display: flex;
   box-sixing: border-box;
   padding: 0.1em 0.5em 0.1em 0.5em;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   background: rgba(0, 0, 0, 0.5);
   height: auto;
-  width: 100%;
   text-align: center;
 }
 
@@ -24,7 +22,7 @@ nav a {
   text-decoration: none;
   list-style: none;
   padding: 0 1em 0 1em;
-  transition: linear 200ms;
+  transition: linear 250ms;
 }
 
 nav a :hover {
@@ -33,4 +31,50 @@ nav a :hover {
 
 nav a :active {
   color: rgba(100, 100, 233);
+}
+
+#hamburger {
+  display: none;
+}
+
+.hamburger {
+  height: 0.3em;
+  width: 1.5em;
+  margin: 0.1em;
+  background: white;
+  border-radius: 1em;
+  transition: ease-in-out 250ms;
+}
+
+@media screen and (max-width: 700px) {
+  nav {
+    height: 2em;
+    position: relative;
+  }
+
+  nav ul {
+    box-sizing: border-box;
+    outline: 5px white;
+    display: flex;
+    background: rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    position: absolute;
+    top: 1.2em;
+    right: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul li,
+  nav a {
+    padding: 0.5em 0.5em 0 0;
+  }
+  nav ul li {
+    padding-bottom: 1em;
+  }
+  #hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
