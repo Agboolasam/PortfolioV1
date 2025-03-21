@@ -10,7 +10,7 @@ function Nav() {
                     <ul >
                         <NavLink to={"/projects"}> <li>Projects</li></NavLink>
                         <NavLink to={"/contact"}> <li>Contact</li></NavLink>
-                        <a href="/src/assets/AgboolaSamsonIfedolapo.pdf" download><li>Download Resume</li></a>
+                        <a href="https://docs.google.com/document/d/11F-iTWCiEkMI8_hl-QATYDuBTNSK7tfgknoXYdQZDqk/edit?usp=sharing" target="_blank"><li>Download Resume</li></a>
                     </ul>
                 </div>
                 <Hamburger />
