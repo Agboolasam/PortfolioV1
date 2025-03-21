@@ -5,7 +5,7 @@
 }
 nav {
   display: flex;
-  box-sixing: border-box;
+  box-sizing: border-box;
   padding: 0.1em 0.5em 0.1em 0.5em;
   justify-content: space-between;
   align-items: center;
