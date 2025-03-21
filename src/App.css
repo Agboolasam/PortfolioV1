@@ -1,5 +1,7 @@
-.Ap {
-  z-index: 1;
+.App {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 nav {
   display: flex;
@@ -44,6 +46,44 @@ nav a :active {
   background: white;
   border-radius: 1em;
   transition: ease-in-out 250ms;
+}
+
+main {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#left,
+#right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+}
+
+#right img {
+  height: 50em;
+  object-fit: cover;
+  top: 0;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    height: 50em;
+  }
 }
 
 @media screen and (max-width: 700px) {
