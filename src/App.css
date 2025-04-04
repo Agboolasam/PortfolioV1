@@ -65,6 +65,10 @@ main {
   width: 50vw;
 }
 
+#left {
+  flex-direction: column;
+}
+
 #right img {
   height: 50em;
   object-fit: cover;
@@ -116,4 +120,31 @@ main {
     flex-direction: column;
     justify-content: space-between;
   }
+}
+
+.typing-effect .cursor {
+  display: inline-block;
+  width: 1px;
+  background-color: black;
+  animation: blink 0.7s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+#changingtext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#iam {
+  padding-right: 0.5em;
 }
