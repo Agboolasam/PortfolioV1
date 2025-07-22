@@ -28,6 +28,7 @@ const TypingEffect = () => {
 
                 if (charIndex === 0) {
                     setIsDeleting(false);
+                    setText(''); // Clear text before typing the next word
                     setIndex((prev) => (prev + 1) % textArray.length); // Move to the next word
                 }
             }
@@ -38,7 +39,7 @@ const TypingEffect = () => {
         return () => clearTimeout(timer);
     }, [charIndex, isDeleting, index, textArray]);
 
-    return <div className="typing-effect"> {text}<span className="cursor">|</span></div>;
+    return <div className="typing-effect"> {text}<span className="cursor"></span></div>;
 };
 
 export default TypingEffect;
