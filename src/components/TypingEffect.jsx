@@ -5,9 +5,9 @@ const TypingEffect = () => {
     const [index, setIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const textArray = ["Frontend Developer", "Backend Enthusiast", "Cloud DevOps Enthusiast", "Mechanical Design Engineer"];
+    const textArray = ["Frontend Developer", "Cloud DevOps Engineer", "Mechanical Design Engineer", "Backend Enthusiast"];
     const typingSpeed = 100; // Speed of typing
-    const deletingSpeed = 50; // Speed of deleting
+    const deletingSpeed = 100; // Speed of deleting
     const pauseTime = 2000; // Pause time before switching to the next word
 
     useEffect(() => {

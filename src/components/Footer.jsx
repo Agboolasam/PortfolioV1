@@ -1,9 +1,10 @@
 
 
 function Footer() {
+    const currentYear = new Date().getFullYear();
     return (
-        <div>
-
+        <div id="footer">
+            &copy; {currentYear} TheRealAgboola. All rights reserved.
         </div>
     )
 }
