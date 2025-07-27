@@ -299,6 +299,16 @@ main {
     height: 10em;
     border-radius: 10px;
   }
+  #about {
+    font-size: 0.8em;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.87);
+    margin-top: 1em;
+    text-align: justify;
+    background-color: rgba(216, 199, 163);
+    padding: 1em;
+    border-radius: 0 22px 24px 22px;
+  }
 
   nav li:hover {
     color: rgba(233, 100, 100);
