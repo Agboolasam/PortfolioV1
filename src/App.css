@@ -382,7 +382,7 @@ main {
   .toolscontainer {
     display: grid;
     grid-template-columns: repeat(2, minmax(180px, 1fr));
-    gap: 1em;
+    gap: 0.5em;
     justify-items: center;
     align-items: stretch;
     margin-bottom: 2em;
