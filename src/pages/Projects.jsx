@@ -31,7 +31,7 @@ function Projects() {
     ]
     return (
         <div className="projectsContainer">
-            <h1>Projects</h1>
+
             {projects.map((project, index) => (
                 <EntryAnimate key={index}>
                     <Project
