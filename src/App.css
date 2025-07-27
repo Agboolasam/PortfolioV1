@@ -49,6 +49,15 @@ nav a :active {
   display: none;
 }
 
+main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .hamburger {
   height: 0.3em;
   width: 1.5em;
@@ -205,6 +214,33 @@ nav a :active {
   border-radius: 0 22px 24px 22px;
 }
 
+.toolscontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+.tools {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  padding: 1em;
+  background-color: rgba(216, 199, 163);
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.divider {
+  width: 90%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0 2em;
+}
+
 @media screen and (max-width: 700px) {
   .App {
     height: auto;
@@ -312,5 +348,14 @@ nav a :active {
 
   nav li:hover {
     color: rgba(233, 100, 100);
+  }
+
+  .toolscontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5em;
+    justify-items: center;
+    align-items: stretch;
+    margin-bottom: 2em;
   }
 }

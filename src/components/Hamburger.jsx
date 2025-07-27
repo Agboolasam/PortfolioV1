@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { UseHamburger } from "../contexts/HamburgerContext";
 function Hamburger() {
     const [isOpen, toggleHamburger] = UseHamburger();

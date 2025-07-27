@@ -1,6 +1,7 @@
 import UseInView from "../Hooks/UseInView"
 
 
+// eslint-disable-next-line react/prop-types
 function EntryAnimate({ children, threshold = 0.1 }) {
     const [ref, isInView] = UseInView(threshold);
     return (

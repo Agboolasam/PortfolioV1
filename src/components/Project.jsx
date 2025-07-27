@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 function Project({ title, description, link, repolink }) {
     return (
         <div className="projectContainer">
