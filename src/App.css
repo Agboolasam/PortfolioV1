@@ -221,6 +221,7 @@ main {
 }
 
 .tools {
+  box-sizing: content-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -243,13 +244,14 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.5em;
+  padding: 0.3em;
   text-align: center;
   width: 100%;
   height: 100%;
   z-index: 1000;
   transform: translateY(50%);
   opacity: 0;
+  overflow: hidden;
   border-radius: 10px;
   visibility: hidden;
   transition: display 0.1s ease, background-color 0.5s ease,
@@ -259,7 +261,7 @@ main {
 .tools:hover > .tools-text {
   visibility: visible;
   opacity: 1;
-  background-color: rgba(216, 199, 163, 0.67);
+  background-color: rgba(216, 199, 163, 0.97);
   transform: translateY(0);
 }
 
@@ -268,6 +270,92 @@ main {
   height: 2px;
   background-color: rgba(0, 0, 0, 0.5);
   margin: 0 2em;
+}
+
+#certifications {
+  font-size: 2em;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.87);
+  margin: 2em 0;
+  border-radius: 30px;
+  padding: 0.3em;
+  text-align: center;
+  border: 2px dashed rgba(0, 0, 0, 0.5);
+  background-color: rgba(216, 199, 163);
+}
+
+.lilHeader {
+  padding: 0.2em;
+  text-align: center;
+  border-bottom: 2px dashed rgba(0, 0, 0, 0.5);
+}
+
+#certscontainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.certs {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  padding: 2em;
+  margin: 1em 0;
+  border-radius: 10px;
+  outline: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.certs img,
+.tools img {
+  width: 100px;
+}
+
+.certtext a {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none;
+  border: 2px dashed rgba(0, 0, 0, 0.5);
+  padding: 0.1em;
+  width: 5em;
+  border-radius: 10px;
+}
+.certtext a:hover {
+  color: rgba(233, 100, 100);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.certtext {
+  position: absolute;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(216, 199, 163, 0.97);
+  height: 100%;
+  border-radius: 10px;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transform: translateY(50%);
+  z-index: 1000;
+  transition: visibility 0.1s ease, opacity 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
+}
+
+.certs:hover > .certtext {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media screen and (max-width: 700px) {
@@ -382,9 +470,14 @@ main {
   .toolscontainer {
     display: grid;
     grid-template-columns: repeat(2, minmax(180px, 1fr));
-    gap: 0.5em;
+    gap: 1em;
     justify-items: center;
-    align-items: stretch;
+    align-items: center;
     margin-bottom: 2em;
+  }
+
+  #certifications {
+    font-size: 1.5em;
+    font-weight: 500;
   }
 }

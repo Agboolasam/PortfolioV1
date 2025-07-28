@@ -22,6 +22,7 @@ function Nav() {
                 id="desktop-nav"
             >
                 <ul style={{ display: isOpen ? "none" : "flex" }}>
+                    <NavLink to={"/"}><li>Home</li></NavLink>
                     <NavLink to={"/projects"}><li>Projects</li></NavLink>
                     <NavLink to={"/contact"}><li>Contact</li></NavLink>
                     <a href="https://docs.google.com/document/d/11F-iTWCiEkMI8_hl-QATYDuBTNSK7tfgknoXYdQZDqk/edit?usp=sharing" target="_blank"><li>Download Resume</li></a>
@@ -36,6 +37,7 @@ function Nav() {
                     style={{ display: isOpen ? "flex" : "none", zIndex: 1000 }}
                 >
                     <ul style={{ display: isOpen ? "flex" : "none" }}>
+                        <NavLink to={"/"} onClick={toggleHamburger}><li>Home</li></NavLink>
                         <NavLink to={"/projects"} onClick={toggleHamburger}><li>Projects</li></NavLink>
                         <NavLink to={"/contact"} onClick={toggleHamburger}><li>Contact</li></NavLink>
                         <a href="https://docs.google.com/document/d/11F-iTWCiEkMI8_hl-QATYDuBTNSK7tfgknoXYdQZDqk/edit?usp=sharing" target="_blank"><li>Download Resume</li></a>
