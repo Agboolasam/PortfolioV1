@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Lobster&display=swap");
 
 .App {
-  height: auto;
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -153,6 +152,7 @@ main {
 }
 
 #footer {
+  width: 100%;
   bottom: 0;
   text-align: center;
   padding: 0.5em;
@@ -359,10 +359,116 @@ main {
   transform: translateY(0);
 }
 
+.contact-page {
+  min-height: 90vh;
+  padding: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contact-page section {
+  width: 50%;
+  height: 100%;
+  margin: 0 1em;
+  padding: 1em;
+}
+.contact-form {
+  background-color: rgba(216, 199, 163, 0.97);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin-top: 3em;
+}
+.contact-form form div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-form form > label {
+  font-size: 1em;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.87);
+  margin-bottom: 0.5em 0;
+  align-self: flex-start;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin: 0.2em 0;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 234);
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1em;
+}
+.contact-form form textarea {
+  height: 10em;
+}
+
+.contact-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#lets-connect {
+  font-size: 1em;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.87);
+  padding: 0.3em;
+  border: 2px dashed rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: background-color 0.5s ease, border 0.5s ease;
+}
+#lets-connect:hover {
+  background-color: rgba(216, 199, 163, 0.97);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+.social img {
+  width: 4em;
+  height: 4em;
+  border-radius: 100%;
+}
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-top: 1em;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: visibility 0.1s ease-in-out, opacity 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
+}
+.contact-intro-social:hover > .social {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.contact-intro-social:hover > #lets-connect {
+  background-color: rgba(216, 199, 163, 0.97);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
 @media screen and (max-width: 700px) {
-  .App {
-    height: auto;
-  }
   nav {
     height: 2em;
     position: relative;
@@ -480,5 +586,23 @@ main {
   #certifications {
     font-size: 1.5em;
     font-weight: 500;
+  }
+
+  .contact-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-page section {
+    width: 100%;
+    margin: 0.5em;
+  }
+  .contact-form form {
+    width: 90%;
+  }
+  .social img {
+    width: 2em;
+    height: 2em;
+    border-radius: 100%;
   }
 }
