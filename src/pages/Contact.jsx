@@ -60,7 +60,7 @@ function Contact() {
                     <input type="email" placeholder="Your Email" required />
                     <label htmlFor="message">Message</label>
                     <textarea id="message" placeholder="What would you like to discuss?" required></textarea>
-                    <button type="submit">Send Message</button>
+                    <button id="submit-btn" type="submit">Send Message</button>
                 </form>
 
             </section>

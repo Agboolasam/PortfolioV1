@@ -468,6 +468,25 @@ main {
   border: 2px solid rgba(0, 0, 0, 0.5);
 }
 
+#submit-btn {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 1em;
+  background-color: rgba(216, 199, 163, 0.97);
+  border: 2px dashed rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.5s ease, border 0.5s ease;
+}
+
+#submit-btn:hover {
+  background-color: rgba(255, 255, 234);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
 @media screen and (max-width: 700px) {
   nav {
     height: 2em;
