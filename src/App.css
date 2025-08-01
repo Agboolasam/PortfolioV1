@@ -1,15 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Lobster&display=swap");
 
-// Transition for dark theme
-* {
-  transition: background-color 0.3s ease, color 0.3s ease,
-    border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
 .App {
   margin: 0;
   padding: 0;
-  width: 100vw;
+  overflow-x: hidden;
 }
 nav {
   display: flex;
@@ -86,7 +80,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50vw;
+  width: 50%;
 }
 
 #left {
@@ -237,8 +231,6 @@ main {
   padding: 2em;
   border-radius: 10px;
   outline: 2px solid var(--border-color);
-  background-color: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .tools-icon {
@@ -319,8 +311,6 @@ main {
   margin: 1em 0;
   border-radius: 10px;
   outline: 2px solid var(--border-color);
-  background-color: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .certs img,
@@ -384,13 +374,11 @@ main {
   padding: 1em;
 }
 .contact-form {
-  background-color: var(--card-bg);
+  background-color: var(--secondary-bg);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form form {
@@ -421,7 +409,7 @@ main {
   padding: 0.5em;
   margin: 0.2em 0;
   border: 1px solid var(--border-color);
-  background-color: var(--surface-bg);
+  background-color: var(--primary-bg);
   border-radius: 5px;
   color: var(--text-primary);
   font-size: 1em;
@@ -508,7 +496,7 @@ main {
   nav ul {
     box-sizing: border-box;
     outline: 5px var(--text-light);
-    background: var(--nav-bg);
+    background: var(--accent-primary);
     flex-direction: column;
     position: absolute;
     top: 1.2em;
