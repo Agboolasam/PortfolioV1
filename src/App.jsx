@@ -14,6 +14,7 @@ function App() {
     <HamburgerProvider>
       <Router>
         <div className="App">
+
           <Nav />
 
           <Routes>

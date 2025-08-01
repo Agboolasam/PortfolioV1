@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import Hamburger from "./Hamburger";
 import { UseHamburger } from "../contexts/HamburgerContext";
+import ToggleDarkMode from "./theme/ToggleDarkMode";
 
 function Nav() {
     const [isOpen, toggleHamburger] = UseHamburger();
@@ -17,6 +18,8 @@ function Nav() {
                 <h4 style={{ fontSize: "1em", fontWeight: "bold", wordSpacing: "0.3em" }}>
                     THEREALAGBOOLA.
                 </h4></i></NavLink>
+
+            <ToggleDarkMode />
             <div
                 className="nav-items"
                 id="desktop-nav"
