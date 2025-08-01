@@ -25,7 +25,7 @@ function Contact() {
 
 
             <section className="contact-intro">
-                <h1>Elevate Your Digital Environments and Presence</h1>
+                <h1>Elevate Your Digital Environments and Presence.</h1>
                 <p>
                     Need a skilled Frontend Developer or Cloud DevOps Engineer? Let&apos;s connect and bring your project to life!
                 </p>

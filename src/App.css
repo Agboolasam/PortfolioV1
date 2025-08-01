@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Lobster&display=swap");
 
+// Transition for dark theme
+* {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
 .App {
   margin: 0;
   padding: 0;
@@ -11,7 +17,7 @@ nav {
   padding: 0.1em 0.5em 0.1em 0.5em;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--nav-bg);
   height: auto;
   text-align: center;
 }
@@ -22,7 +28,7 @@ nav ul {
 }
 nav ul li,
 nav a {
-  color: white;
+  color: var(--text-light);
   text-decoration: none;
   list-style: none;
   padding: 0 1em 0 1em;
@@ -37,11 +43,11 @@ nav a {
 }
 
 nav a :hover {
-  color: rgba(233, 100, 100);
+  color: var(--accent-secondary);
 }
 
 nav a :active {
-  color: rgba(100, 100, 233);
+  color: var(--hover-primary);
 }
 
 .MobileNav {
@@ -61,7 +67,7 @@ main {
   height: 0.3em;
   width: 1.5em;
   margin: 0.1em;
-  background: white;
+  background: var(--text-light);
   border-radius: 1em;
   transition: ease-in-out 250ms;
 }
@@ -115,7 +121,7 @@ main {
   margin-left: 2px;
   height: 1em;
   width: 2px;
-  background-color: black;
+  background-color: var(--accent-primary);
   animation: blink 0.7s steps(2, start) infinite;
 }
 
@@ -133,7 +139,7 @@ main {
   font-family: Lobster, sans-serif;
   font-size: 3em;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.87);
+  color: var(--text-primary);
   margin-bottom: 0.5em;
 }
 
@@ -141,7 +147,7 @@ main {
   font-family: "Bitcount Prop Single", sans-serif;
   font-size: 2.5em;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.87);
+  color: var(--text-primary);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,8 +162,8 @@ main {
   bottom: 0;
   text-align: center;
   padding: 0.5em;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: var(--nav-bg);
+  color: var(--text-light);
 }
 
 .entry-animate {
@@ -178,7 +184,7 @@ main {
   align-items: center;
   gap: 2em;
   width: 100%;
-  background-color: rgba(216, 199, 163, 0.67);
+  background-color: var(--secondary-bg);
   font-size: 1.4em;
 }
 
@@ -205,10 +211,10 @@ main {
 #about {
   font-size: 1.4em;
   line-height: 1.5;
-  color: rgba(0, 0, 0, 0.87);
+  color: var(--text-primary);
   margin-top: 1em;
   text-align: justify;
-  background-color: rgba(216, 199, 163);
+  background-color: var(--secondary-bg);
   padding: 1em;
   border-radius: 0 22px 24px 22px;
 }
@@ -230,7 +236,9 @@ main {
   height: 10em;
   padding: 2em;
   border-radius: 10px;
-  outline: 2px solid rgba(0, 0, 0, 0.5);
+  outline: 2px solid var(--border-color);
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .tools-icon {
@@ -261,33 +269,33 @@ main {
 .tools:hover > .tools-text {
   visibility: visible;
   opacity: 1;
-  background-color: rgba(216, 199, 163, 0.97);
+  background-color: var(--secondary-bg);
   transform: translateY(0);
 }
 
 .divider {
   width: 90%;
   height: 2px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--divider-color);
   margin: 0 2em;
 }
 
 #certifications {
   font-size: 2em;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.87);
+  color: var(--text-primary);
   margin: 2em 0;
   border-radius: 30px;
   padding: 0.3em;
   text-align: center;
-  border: 2px dashed rgba(0, 0, 0, 0.5);
-  background-color: rgba(216, 199, 163);
+  border: 2px dashed var(--accent-primary);
+  background-color: var(--secondary-bg);
 }
 
 .lilHeader {
   padding: 0.2em;
   text-align: center;
-  border-bottom: 2px dashed rgba(0, 0, 0, 0.5);
+  border-bottom: 2px dashed var(--accent-primary);
 }
 
 #certscontainer {
@@ -310,7 +318,9 @@ main {
   padding: 2em;
   margin: 1em 0;
   border-radius: 10px;
-  outline: 2px solid rgba(0, 0, 0, 0.5);
+  outline: 2px solid var(--border-color);
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .certs img,
@@ -319,16 +329,16 @@ main {
 }
 
 .certtext a {
-  color: rgba(0, 0, 0, 0.87);
+  color: var(--text-primary);
   text-decoration: none;
-  border: 2px dashed rgba(0, 0, 0, 0.5);
+  border: 2px dashed var(--accent-primary);
   padding: 0.1em;
   width: 5em;
   border-radius: 10px;
 }
 .certtext a:hover {
-  color: rgba(233, 100, 100);
-  border: 2px solid rgba(0, 0, 0, 0.5);
+  color: var(--accent-secondary);
+  border: 2px solid var(--accent-primary);
 }
 
 .certtext {
@@ -340,7 +350,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(216, 199, 163, 0.97);
+  background-color: var(--secondary-bg);
   height: 100%;
   width: 100%;
   border-radius: 10px;
@@ -374,11 +384,13 @@ main {
   padding: 1em;
 }
 .contact-form {
-  background-color: rgba(216, 199, 163, 0.97);
+  background-color: var(--card-bg);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form form {
@@ -398,7 +410,7 @@ main {
 .contact-form form > label {
   font-size: 1em;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.87);
+  color: var(--text-primary);
   margin-bottom: 0.5em 0;
   align-self: flex-start;
 }
@@ -408,10 +420,10 @@ main {
   width: 100%;
   padding: 0.5em;
   margin: 0.2em 0;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  background-color: rgba(255, 255, 234);
+  border: 1px solid var(--border-color);
+  background-color: var(--surface-bg);
   border-radius: 5px;
-  color: rgba(0, 0, 0, 0.87);
+  color: var(--text-primary);
   font-size: 1em;
 }
 .contact-form form textarea {
@@ -430,15 +442,15 @@ main {
 #lets-connect {
   font-size: 1em;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.87);
+  color: var(--text-primary);
   padding: 0.3em;
-  border: 2px dashed rgba(0, 0, 0, 0.5);
+  border: 2px dashed var(--accent-primary);
   border-radius: 10px;
   transition: background-color 0.5s ease, border 0.5s ease;
 }
 #lets-connect:hover {
-  background-color: rgba(216, 199, 163, 0.97);
-  border: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: var(--secondary-bg);
+  border: 2px solid var(--accent-primary);
 }
 .social img {
   width: 4em;
@@ -464,18 +476,18 @@ main {
   transform: translateY(0);
 }
 .contact-intro-social:hover > #lets-connect {
-  background-color: rgba(216, 199, 163, 0.97);
-  border: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: var(--secondary-bg);
+  border: 2px solid var(--accent-primary);
 }
 
 #submit-btn {
   width: 100%;
   padding: 0.5em;
   margin-top: 1em;
-  background-color: rgba(216, 199, 163, 0.97);
-  border: 2px dashed rgba(0, 0, 0, 0.5);
+  background-color: var(--accent-primary);
+  border: 2px solid var(--accent-primary);
   border-radius: 5px;
-  color: rgba(0, 0, 0, 0.87);
+  color: var(--text-light);
   font-size: 1em;
   font-weight: bold;
   cursor: pointer;
@@ -483,8 +495,8 @@ main {
 }
 
 #submit-btn:hover {
-  background-color: rgba(255, 255, 234);
-  border: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: var(--hover-primary);
+  border: 2px solid var(--hover-primary);
 }
 
 @media screen and (max-width: 700px) {
@@ -495,8 +507,8 @@ main {
 
   nav ul {
     box-sizing: border-box;
-    outline: 5px white;
-    background: rgba(0, 0, 0, 0.5);
+    outline: 5px var(--text-light);
+    background: var(--nav-bg);
     flex-direction: column;
     position: absolute;
     top: 1.2em;
@@ -581,16 +593,16 @@ main {
   #about {
     font-size: 0.8em;
     line-height: 1.5;
-    color: rgba(0, 0, 0, 0.87);
+    color: var(--text-primary);
     margin-top: 1em;
     text-align: justify;
-    background-color: rgba(216, 199, 163);
+    background-color: var(--secondary-bg);
     padding: 1em;
     border-radius: 0 22px 24px 22px;
   }
 
   nav li:hover {
-    color: rgba(233, 100, 100);
+    color: var(--accent-secondary);
   }
 
   .toolscontainer {
