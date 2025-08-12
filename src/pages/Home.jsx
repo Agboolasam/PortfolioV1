@@ -76,7 +76,7 @@ export default function Home() {
             <h2>Tools And Tech Expertise</h2>
 
 
-            <section>
+            <section id='tools-section'>
                 <EntryAnimate>
                     <Divider />
                     <h3 className='lilHeader'>Development</h3>
