@@ -8,7 +8,7 @@ import Nav from './components/Nav';
 // import About from './pages/About';
 import Footer from './components/Footer';
 import { HamburgerProvider } from './contexts/HamburgerContext';
-
+import { ThemeProvider } from './contexts/ThemeContext';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const Home = lazy(() => import('./pages/Home'));
@@ -18,26 +18,28 @@ const About = lazy(() => import('./pages/About'));
 
 function App() {
   return (
-    <HamburgerProvider>
-      <Router>
-        <div className="App">
+    <ThemeProvider>
+      <HamburgerProvider>
+        <Router>
+          <div className="App">
 
-          <Nav />
-          <Suspense fallback={<div>Loading...</div>}>
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/about' element={<About />} />
-              <Route path='/projects' element={<Projects />} />
-              <Route path='/contact' element={<Contact />} />
-            </Routes>
-            <Footer />
-          </Suspense>
+            <Nav />
+            <Suspense fallback={<div>Loading...</div>}>
+              <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/about' element={<About />} />
+                <Route path='/projects' element={<Projects />} />
+                <Route path='/contact' element={<Contact />} />
+              </Routes>
+              <Footer />
+            </Suspense>
 
-        </div>
-      </Router >
+          </div>
+        </Router >
 
 
-    </HamburgerProvider>
+      </HamburgerProvider>
+    </ThemeProvider>
 
   );
 }

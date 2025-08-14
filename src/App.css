@@ -487,6 +487,21 @@ main {
   border: 2px solid var(--hover-primary);
 }
 
+.about-container {
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.about-container {
+  box-sizing: border-box;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+#about_code {
+  text-align: left;
+}
+
 @media screen and (max-width: 700px) {
   nav {
     height: 2em;
@@ -541,8 +556,8 @@ main {
     border-radius: 100px;
   }
   #right img {
-    height: 20em;
-    width: 20em;
+    height: 15em;
+    width: 15em;
     object-fit: cover;
     top: 0;
     animation: slideIn 1s ease-in-out;
