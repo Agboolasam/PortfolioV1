@@ -36,20 +36,31 @@ const About = () => {
         <div>
             <div className="about-container">
                 <h1>Meet Me</h1>
-                <div id="about_code">
+                <div id="about_code"
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+
+                    }}
+                >
                     <Highlighter
                         key={isDarkMode ? 'dark' : 'light'}
                         language="javascript"
                         style={theme}
-                        showLineNumbers={true}
+                        showLineNumbers={false}
+                        customStyle={{
+                            width: '80%',
+                            fontSize: '0.875rem',
+                            overflow: 'auto'
+
+                        }}
                     >
 
                         {codeString}
                     </Highlighter>
 
                     <p>
-                        debug: {isDarkMode ? "dark mode" : "light mode"}
-
                     </p>
                 </div>
             </div>

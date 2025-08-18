@@ -510,14 +510,15 @@ main {
 
   nav ul {
     box-sizing: border-box;
-    outline: 5px var(--text-light);
-    background: var(--accent-primary);
+    border: 2px solid var(--text-light);
+    background: var(--nav-bg);
     flex-direction: column;
     position: absolute;
     top: 1.2em;
     right: 0;
     justify-content: space-between;
     align-items: center;
+    border-radius: 8px;
   }
 
   #desktop-nav {
@@ -526,11 +527,17 @@ main {
 
   nav ul li,
   nav a {
+    color: var(--text-light);
     padding: 0.5em 0.5em 0 0;
   }
+
   nav ul li {
     padding-bottom: 1em;
-    transition: linear 250ms;
+    transition: color 250ms linear;
+  }
+
+  nav li:hover {
+    color: var(--accent-secondary);
   }
 
   .MobileNav {
