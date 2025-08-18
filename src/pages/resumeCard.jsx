@@ -30,7 +30,7 @@ const Card = ({ type, items }) => {
         return (
             <div className="workCard" >
                 <span className="dot"></span>
-                <p>
+                <p className="cardHeding">
                     <span>
                         {items.title}
                     </span>
@@ -43,7 +43,7 @@ const Card = ({ type, items }) => {
                     {items.company}
                 </span>
                 <span>
-                    {items.details} {items.tools}
+                    {items.details}. <b>Tools:</b> <i> {items.tools}</i>
                 </span>
             </div>
         )
