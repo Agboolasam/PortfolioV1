@@ -31,19 +31,27 @@ const About = () => {
     };
 };`
 
-    const education = [{
-        school: "Federal University of Agriculture, Abeokuta",
-        year: "2018 - 2024",
-        grade: "Second Class Upper",
-        course: "Mechanical Engineering",
-        cert: "Bachelors of Engineering"
-    },
-    {
-        school: "Oxford Model COllege",
-        year: "2015 - 2018",
-        cert: "SSCE",
-        course: "Senior Secondary Education Certificate",
-    },
+    const education = [
+        {
+            school: "Self Taught",
+            year: "2022 - Present",
+            grade: "",
+            course: "Software , Devops and Cloud Engineering",
+            cert: "Professional"
+        },
+        {
+            school: "Federal University of Agriculture, Abeokuta",
+            year: "2018 - 2024",
+            grade: "Second Class Upper",
+            course: "Mechanical Engineering",
+            cert: "Bachelors of Engineering"
+        },
+        {
+            school: "Oxford Model College",
+            year: "2015 - 2018",
+            cert: "SSCE",
+            course: "Senior Secondary Education Certificate",
+        },
     ];
 
     const experience = [
@@ -55,11 +63,18 @@ const About = () => {
             tools: "ReactJS, Tailwind, Google AppScript",
         },
         {
-            title: "Software Engineer(Development and DevOps)",
-            company: "DSI Fitness",
+            title: "Frontend developer",
+            company: "ArtisanHUB",
             duration: "2024 - Present",
-            details: "Single-handedly built and deployed the website to Azure SWA using GitHub actions. Incorporated Google Appscript with Frontend for email notification, and Slack notification. Used TailwindCSS for styling. Built GitHub Actions workflows for seamless deployment of containerized applications to Azure Web Apps.",
-            tools: "ReactJS, Tailwind, Google AppScript",
+            details: "Wrote clean code to render user-friendly interfaces using ReactJS and handled CI/CD for the Azure SWA using GitHub Actions. Creating custom hooks and using React built-in hooks and custom hooks in code whileenhancing code reuseability and modularity. Teamwork using project management tools such as Google Spaces. Managing API integration in front-end code to ensure seamless communication withthe back end and database.",
+            tools: "ReactJS, Tailwind, Github Actions",
+        },
+        {
+            title: "Frontend Engineer",
+            company: "Enoverlab",
+            duration: "2024 - Present",
+            details: "Build interfaces and functionalities from designs provided by the UI/UX designer. Collaboration on figma and Github. Cost Management in building a startup.",
+            tools: "ReactJS, TailwindCSS, Figma",
         },
     ]
 
