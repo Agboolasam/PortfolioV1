@@ -29,7 +29,7 @@ function Nav() {
                     <NavLink to={"/projects"}><li>Projects</li></NavLink>
                     <NavLink to={"/contact"}><li>Contact</li></NavLink>
                     <NavLink to={"/about"}><li>About</li></NavLink>
-                    <a href="https://docs.google.com/document/d/11F-iTWCiEkMI8_hl-QATYDuBTNSK7tfgknoXYdQZDqk/edit?usp=sharing" target="_blank"><li>Download Resume</li></a>
+                    <a href="https://drive.google.com/file/d/1-uVrVvQQVDbxrszcekcaTEub0yUnDELz/view?usp=sharing" target="_blank"><li>Download Resume</li></a>
                 </ul>
             </div>
 
@@ -45,7 +45,7 @@ function Nav() {
                         <NavLink to={"/projects"} onClick={toggleHamburger}><li>Projects</li></NavLink>
                         <NavLink to={"/contact"} onClick={toggleHamburger}><li>Contact</li></NavLink>
                         <NavLink to={"/about"} onClick={toggleHamburger}><li>About</li></NavLink>
-                        <a href="https://docs.google.com/document/d/11F-iTWCiEkMI8_hl-QATYDuBTNSK7tfgknoXYdQZDqk/edit?usp=sharing" target="_blank"><li>Download Resume</li></a>
+                        <a href="https://drive.google.com/file/d/1-uVrVvQQVDbxrszcekcaTEub0yUnDELz/view?usp=sharing" target="_blank"><li>Download Resume</li></a>
                     </ul>
                 </div>
                 <Hamburger />

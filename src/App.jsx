@@ -33,7 +33,6 @@ function App() {
               </Routes>
               <Footer />
             </Suspense>
-
           </div>
         </Router >
 

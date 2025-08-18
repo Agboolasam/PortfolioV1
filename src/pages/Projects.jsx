@@ -4,29 +4,41 @@ import EntryAnimate from '../components/EntryAnimate';
 function Projects() {
     const projects = [
         {
+            title: "DSI FITNESS",
+            description: "This is a fitness website, Still in dev stage. MAkes use of Google appscripts to handle events. Built with ReactJS and tailwindCSS",
+            link: "https://proud-forest-076d4e10f.6.azurestaticapps.net/",
+            repolink: ""
+        },
+        {
+            title: "ArtisanHub",
+            description: "ArisanHub is a startup, that connecting artisans to potential clients",
+            link: "https://artisan.teslarez.xyz",
+            repolink: ""
+        },
+        {
             title: "AuthX",
-            description: "This is a description of AuthX .",
+            description: "Simple Login system that uses a Mongo DB and a Node JS backend (Backend not hosted)",
             link: "https://authx1.netlify.app",
             repolink: ""
         },
         {
-            title: "ArtisanHub",
-            description: "This is a description of AuthX .",
-            link: "https://authx1.netlify.app",
+            title: "Shopify",
+            description: "Simple Shopify On boarding page ",
+            link: "https://shopify-agboola.netlify.app/",
             repolink: ""
         },
         {
-            title: "ArtisanHub",
-            description: "This is a description of AuthX .",
-            link: "https://authx1.netlify.app",
+            title: "Mobile Mart",
+            description: "Landing page for a Gadget store  ",
+            link: "https://mobilemarthng.netlify.app/",
             repolink: ""
         },
         {
-            title: "ArtisanHub",
-            description: "This is a description of AuthX .",
-            link: "https://authx1.netlify.app",
+            title: "Basic Calculator",
+            description: "Basic calculator with HTML, CSS and JS. with darkmode implementation ",
+            link: "https://agboolabasiccalc.netlify.app/",
             repolink: ""
-        }
+        },
 
     ]
     return (

@@ -489,17 +489,49 @@ main {
 
 .about-container {
   box-sizing: border-box;
-  height: 100vh;
-}
-
-.about-container {
-  box-sizing: border-box;
   display: flex;
   text-align: center;
   flex-direction: column;
+  align-items: center;
+  width: 100vw;
 }
 #about_code {
+  width: 80%;
   text-align: left;
+}
+
+.eduCard,
+.workCard {
+  width: 70%;
+  padding: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+  border-left: 2px solid var(--accent-primary);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.cardHeding {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardHeding + span,
+.cardHeding + span + span {
+  text-align: left;
+  padding-bottom: 3px;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  border: 1px solid var(--accent-primary);
+  position: absolute;
+  top: 0;
+  left: -6px;
 }
 
 @media screen and (max-width: 700px) {
@@ -645,5 +677,23 @@ main {
     width: 2em;
     height: 2em;
     border-radius: 100%;
+  }
+
+  .eduCard,
+  .workCard {
+    width: 90%;
+    padding: 10px;
+    margin: 5px;
+    box-sizing: border-box;
+    border-left: 2px solid var(--accent-primary);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cardHeding {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
